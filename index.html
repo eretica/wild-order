@@ -4,14 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WILD ORDER</title>
+    <meta name="description" content="神話の魔物を従えて戦うドット絵のRPG。ビーストは自分で戦い、あなたは指示を出す。ブラウザで遊べる。" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- リンクを貼ったときの紹介。og:image は絶対 URL でないと読まれない -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WILD ORDER" />
+    <meta property="og:description" content="神話の魔物を従えて戦うドット絵のRPG。ビーストは自分で戦い、あなたは指示を出す。ブラウザで遊べる。" />
+    <meta property="og:url" content="https://eretica.github.io/wild-order/" />
+    <meta property="og:image" content="https://eretica.github.io/wild-order/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <style>
       html, body { margin: 0; height: 100%; background: #101018; overflow: hidden; }
       #game-container { width: 100vw; height: 100vh; }
+      /* JS が動く前から出す。BootScene が外す。文字はフォントを読む前なので端末の等幅で出る */
+      #loading {
+        position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+        background: #101018; color: #98a0b8; font: 20px monospace; pointer-events: none;
+      }
+      #loading img { width: 64px; height: 64px; image-rendering: pixelated; }
     </style>
-    <script type="module" crossorigin src="./assets/index-p6HdAfaU.js"></script>
+    <script type="module" crossorigin src="./assets/index-BZIPGCjS.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/phaser-BwSGr_Za.js">
   </head>
   <body>
+    <div id="loading"><img src="favicon-32.png" alt="" /><div>よみこみちゅう…</div></div>
     <div id="game-container"></div>
   </body>
 </html>
